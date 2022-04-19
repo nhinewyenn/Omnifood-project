@@ -1,20 +1,17 @@
-console.log("hello world")
+
 const myName = ("Nhi Nguyen")
 const h1 = document.querySelector(".heading-primary")
-console.log(myName)
-console.log(h1)
 
 ///////////////////////////////////////////////////////////
 // SET CURRENT YEAR
-const yearEL = document.querySelector(".year")
+const yearEL = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
-console.log("currentYear")
 yearEL.textContent = currentYear;
 
 ///////////////////////////////////////////////////////////
 // MAKE MOBILE NAVIGATION WORK
 const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header")
+const headerEl = document.querySelector(".header");
 btnNavEl.addEventListener('click', function() {
 headerEl.classList.toggle("nav-open")
 });
@@ -53,15 +50,11 @@ const sectionHeroEl = document.querySelector(".section-hero");
 
 const observer = new IntersectionObserver(function(entries){
   const ent = entries[0];
-  console.log(ent);
 
-  if(ent.isIntersecting === false) {
-  document.body.classList.add("sticky");
-  }
+  if(ent.isIntersecting === false) document.body.classList.add("sticky");
 
-  if(ent.isIntersecting === true) {
-  document.body.classList.remove("sticky");
-  }
+  if(ent.isIntersecting === true) document.body.classList.remove("sticky");
+  
 }, 
 {
   // in the viewport
