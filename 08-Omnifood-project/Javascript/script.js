@@ -1,27 +1,25 @@
 
-const myName = ("Nhi Nguyen")
 const h1 = document.querySelector(".heading-primary")
 
 ///////////////////////////////////////////////////////////
 // SET CURRENT YEAR
-const yearEL = document.querySelector(".year");
+const yearEL = document.querySelector(".year")
 const currentYear = new Date().getFullYear();
 yearEL.textContent = currentYear;
 
 ///////////////////////////////////////////////////////////
 // MAKE MOBILE NAVIGATION WORK
 const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header");
-btnNavEl.addEventListener('click', function() {
+const headerEl = document.querySelector(".header")
+btnNavEl.addEventListener('click', () => {
 headerEl.classList.toggle("nav-open")
 });
 
 ///////////////////////////////////////////////////////////
 // SMOOTH SCROLLING ANIMATION
 const allLinks = document.querySelectorAll("a:link");
-
-allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
+allLinks.forEach(link => {
+  link.addEventListener("click", e => {
     e.preventDefault();
     const href = link.getAttribute("href");
 
@@ -48,20 +46,16 @@ allLinks.forEach(function (link) {
 // Sticky Navigation
 const sectionHeroEl = document.querySelector(".section-hero");
 
-const observer = new IntersectionObserver(function(entries){
+const observer = new IntersectionObserver((entries) => {
   const ent = entries[0];
-
   if(ent.isIntersecting === false) document.body.classList.add("sticky");
-
   if(ent.isIntersecting === true) document.body.classList.remove("sticky");
-  
 }, 
 {
   // in the viewport
   root: null,
   threshold: 0,
   rootMargin: "-80px",
-
 });
 observer.observe(sectionHeroEl);
 
@@ -85,8 +79,3 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
-// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
-
-/*
-
-*/
