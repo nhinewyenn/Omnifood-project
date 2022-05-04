@@ -1,5 +1,11 @@
-# Omnifood website project (responsive)
-## HTML, CSS, JS
-- This is an inspired website based on hellofresh to do as a mock website. 
-- This website is built using html, css and javascript
-- Javascript was used to make the mobile navigation work (sticky, smooth scrolling). Also, fixing flexbox gap related problem in Safari
+# Omnifood website
+
+A food subscription landing page using UI/UX best practices to showcase the client's products' and price
+
+## Tech Stack
+
+**Built:** HTML, CSS, JavaScript
+
+## Screenshots
+
+![App Screenshot](/img/landing.webp)
