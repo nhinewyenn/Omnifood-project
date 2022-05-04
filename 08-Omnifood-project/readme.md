@@ -8,4 +8,4 @@ A food subscription landing page using UI/UX best practices to showcase the clie
 
 ## Screenshots
 
-![App Screenshot](/img/landing.webp)
+![App Screenshot](./img/landing.webp)
